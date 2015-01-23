@@ -31,6 +31,7 @@ body {
 
 a {
 	@include transition(all 0.3s ease);
+	text-decoration: none;
 }
 
 p,
