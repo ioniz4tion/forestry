@@ -22,7 +22,7 @@
 
 				<!--<div class="max-width">-->
 
-				<p>&copy; 2014 Insert Name Here. All Rights Reserved.</p>
+				<p>&copy; 2015 Rocky Mountain Forestry. All Rights Reserved.</p>
 
 				<!--</div>-->
 
