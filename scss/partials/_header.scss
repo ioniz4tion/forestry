@@ -1,3 +1,40 @@
+@mixin header-background {
+	background:
+		-ms-linear-gradient(
+			left,
+			rgba(255,255,255,0),
+			rgba(255,255,255,0.7)),
+		url(../images/banner.jpg);
+
+	background:
+		-moz-linear-gradient(
+			left,
+			rgba(255,255,255,0),
+			rgba(255,255,255,0.7)),
+		url(../images/banner.jpg);
+
+	background:
+		-webkit-linear-gradient(
+			left,
+			rgba(255,255,255,0),
+			rgba(255,255,255,0.7)),
+		url(../images/banner.jpg);
+
+		background:
+		-o-linear-gradient(
+			left,
+			rgba(255,255,255,0),
+			rgba(255,255,255,0.7)),
+		url(../images/banner.jpg);
+
+		background:
+		linear-gradient(
+			left,
+			rgba(255,255,255,0),
+			rgba(255,255,255,0.7)),
+		url(../images/banner.jpg);
+}
+
 header {
 	padding: $scale * 50px;
 	position: relative;
@@ -20,6 +57,8 @@ header {
 		right: 0;
 		position: absolute;
 		z-index: -1;
+
+		@include header-background;
 	}
 
 	a {
