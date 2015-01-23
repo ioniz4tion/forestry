@@ -1,0 +1,38 @@
+$portrait-dims: $scale * 200px;
+
+.portrait {
+	display: block;
+	width: $portrait-dims;
+	height: $portrait-dims;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: $scale * 20px auto;
+	position: relative;
+
+	img {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		width: $portrait-dims;
+		height: $portrait-dims;
+
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+.person {
+	width: 80%;
+	max-width: $scale * 850px;
+	margin: 0 auto;
+
+	th {
+		text-align: left;
+		vertical-align: top;
+		padding-right: $scale * 20px !important;
+	}
+
+	th,
+	td {
+		padding: $scale * 20px 0;		
+	}
+}

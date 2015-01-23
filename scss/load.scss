@@ -1,0 +1,74 @@
+$boxWidth: 300px;
+$ballWidth: 21px;
+$width: 50px;
+$height: 55px;
+$time: 2.1s;
+$scale: 1.1;
+
+body {
+  background: #16A085;
+}
+ 
+.preload-juggle {
+  width: $boxWidth;
+  height: $boxWidth;
+  position: absolute;
+  top: 50%;
+  margin-top: -$boxWidth/2;
+  left: 50%;
+  margin-left: -$boxWidth/2;
+  
+  div {
+    position: absolute;
+    width: $ballWidth;
+    height: $ballWidth;
+    border-radius: $ballWidth/2;
+    background: #1BBC9B;
+    margin-top: $boxWidth/2;
+    margin-left: $boxWidth/2;
+    animation: juggle $time linear infinite;
+  }
+  
+  div:nth-child(1) {
+    animation-delay: -$time/3;
+  }
+  
+  div:nth-child(2) {
+    animation-delay: -$time/1.5;
+  }
+  
+} 
+ 
+ 
+ 
+@keyframes juggle {
+  0% { 
+    transform: translateX(0px) translateY(0px); 
+  }
+  12.5% { 
+    transform: translateX($width/2) translateY(-$height) scale($scale);  background: #36D7B7;
+   }
+  25% { 
+    transform: translateX($width) translateY(0px) ; 
+    animation-timing-function: ease-out;  }
+  37.5% { 
+    transform: translateX($width/2) translateY($height);  
+  }
+  50% { 
+    transform: translateX(0px) translateY(0px);
+  }
+  62.5% { 
+    transform: translateX(-$width/2) translateY(-$height) scale($scale); 
+    animation-timing-function: ease-in;
+  }
+  75% { 
+    transform: translateX(-$width) translateY(0px); 
+    animation-timing-function: ease-out;
+  }
+  87.5% { 
+    transform: translateX(-$width/2) translateY($height);
+  }
+  100% { 
+    transform: translateX(0px) translateY(0px); 
+  }
+}

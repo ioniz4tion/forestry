@@ -1,0 +1,1747 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 3, 2014, 10:26:15 AM
+    Author     : iqover9000
+*/
+
+$scale: 1;
+
+// Colors
+$bright-green: #7fe22a;
+$dark-grey: #292929;
+$light-grey: #e7e7e7;
+$very-light-grey: #b3b3b3;
+$sky-blue: #258ecd;
+$brown: #b7987d;
+
+$nav-time: 0.5s;
+$ddown-1-height: 37px;
+$ddown-2-height: 62px;
+$ddown-3-height: 87px;
+$line-pos: 117px;
+$line-rotate: 20deg;
+$arrow-pos: 17px;
+$arrow-rotate: 70deg;
+$quote-width: 300px;
+$border-translate: 10px;
+$portrait-dims: 200px;
+
+@mixin transition($transition) {
+	-ms-transition:     $transition;
+	-webkit-transition: $transition;
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+}
+
+@mixin transform($transform) {
+	-ms-transform:     $transform;
+	-webkit-transform: $transform;
+	-moz-transform:    $transform;
+	-o-transform:      $transform;
+}
+
+@mixin box-sizing {
+	-ms-box-sizing:     border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	-o-box-sizing:      border-box;
+	box-sizing:         border-box;
+}
+
+@mixin line-transition {
+	-ms-transition:     all $nav-time ease, background 0.3s ease;
+	-webkit-transition: all $nav-time ease, background 0.3s ease;
+	-moz-transition:    all $nav-time ease, background 0.3s ease;
+	-o-transition:      all $nav-time ease, background 0.3s ease;
+}
+
+@mixin line-transform($line-transform) {
+	-ms-transform:     translateY(-50%) $line-transform;
+	-webkit-transform: translateY(-50%) $line-transform;
+	-moz-transform:    translateY(-50%) $line-transform;
+	-o-transform:      translateY(-50%) $line-transform;
+}
+
+
+@mixin line {
+	display: inline-block;
+	width: 35px;
+	height: 5px;
+	background: #fff;
+	border-radius: 5px;
+	//box-shadow: 0 0 10px rgba(200, 200, 200, 0.7);
+
+	@include transition(all $nav-time ease);
+	@include arrow-shadow(rgba(200, 200, 200, 0.7));
+}
+
+@mixin arrow {
+	display: inline-block;
+	width: 12px;
+	height: 2px;
+	background: #fff;
+	border-radius: 5px;
+	//box-shadow: 0 0 10px rgba(200, 200, 200, 0.7);
+
+	@include transition(all 0.3s ease);
+	@include arrow-shadow(rgba(200, 200, 200, 0.7));
+}
+
+@mixin arrow-shadow($color) {
+	box-shadow: 0 0 10px $color;
+}
+
+/*@mixin cool-link-transition-01 {
+	-ms-transition:     -ms-transform 0.3s;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition:    -moz-transform 0.3s;
+	-o-transition:      -o-transform 0.3s;
+	transition:         transform 0.3s;
+}*/
+
+@mixin cool-link-transition {
+	-ms-transition:     opacity 0.3s, -ms-transform 0.3s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition:    opacity 0.3s, -moz-transform 0.3s;
+	-o-transition:      opacity 0.3s, -o-transform 0.3s;
+	transition:         opacity 0.3s, transform 0.3s;
+}
+
+@mixin selection {
+	background: #439add;
+	color: #000;
+	text-shadow: none;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans';
+	color: $dark-grey;
+	display: block !important;
+	position: relative;
+	line-height: 1.4;
+	background: #fff;
+	font-size: $scale * 18px;
+}
+
+#page-wrap {
+	display: none;
+}
+
+.max-width {
+	height: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+a {
+	@include transition(all 0.3s ease);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}
+
+/*nav {
+	background: $dark-grey;
+	color: #fff;
+	height: $scale * 50px;
+	font-family: 'Fjalla One';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	
+	.max-width {
+		padding: 0 $scale * 60px;
+	}
+	
+	p {
+		display: inline;
+	}
+	
+	a:hover {
+		color: $sky-blue !important;
+
+		img {
+			background: $sky-blue !important;
+		}
+	}
+	
+}
+
+#logo {
+	display: inline-flex;
+	float: left;
+	height: 100%;
+	color: #fff;
+	text-decoration: none;
+	margin-right: $scale * 20px;
+	line-height: $scale * 50px;
+	
+	img {
+		height: $scale * 40px;
+		margin: auto;
+		margin-right: $scale * 15px;
+		background: #fff;
+
+		@include transition(all 0.3s ease);
+	}
+	
+}
+
+#nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+
+	height: 100%;
+	width: 100%;
+	float: right;
+	
+	div {
+		display: inline-flex;
+		height: 100%;
+		margin: 0 $scale * 20px;
+		position: relative;
+		
+		a {
+			display: block;
+			margin: auto;
+			color: #fff;
+			text-decoration: none;
+			
+		}
+
+		p {
+			margin: auto;
+		}
+	}
+	
+	div:last-child {
+		margin-right: 0px;
+	}
+	
+	ul {
+		//visibility: hidden;
+		//opacity: 0;
+		padding: 0;
+		background-color: #4b4b4b;
+		text-align: left;
+		position: absolute;
+		top: $scale * 20px;
+		left: 50%;
+		//bottom: -6px;
+		margin-left: $scale * -105px;
+		width: $scale * 210px;
+		list-style: none;
+		//max-height: 0px;
+		overflow: hidden;
+		height: 0px;
+		font-size: 100%;
+
+		@include transition(all 0.3s ease);
+		
+		li {
+			padding: $scale * 6px $scale * 12px;
+		}
+
+		li:first-child {
+			padding-top: $scale * 10px;
+		}
+
+		li:last-child {
+			padding-bottom: $scale * 10px;
+		}
+		
+		a {
+			display: inline;
+		}
+
+	}
+	
+	ul:before {
+		content: '';
+		display: block;
+		border-color: transparent transparent $dark-grey transparent;
+		border-style: solid;
+		border-width: 10px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		margin-left: -10px;
+	}
+	
+}
+
+#nav-services:hover,
+#nav-services:focus {
+	ul {
+		height: $scale * ((5 * $ddown-1-height) + (5 * $ddown-2-height) + (1 * $ddown-3-height) + 8px);
+	}
+}
+
+#nav-about:hover,
+#nav-about:focus {
+	ul {
+		height: $scale * ($ddown-1-height * 5 + 8px);
+	}
+}*/
+
+nav {
+	background: $dark-grey;
+	color: #fff;
+	position: fixed;
+	width: 240px;
+	height: calc(100% - 35px);
+	top: 100%;
+	z-index: 1000;
+	left: 0;
+	font-family: 'Fjalla One';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-shadow: 2px 2px 0 #000;
+	box-shadow: 1px -1px 5px #000;
+
+	@include transition(all $nav-time ease);
+
+	h3 {
+		//color: #afdefa;
+		color: $bright-green;
+		//background: $dark-grey;
+		font-size: 24px;
+		padding: 20px;
+		margin: 0;
+		font-weight: 300;
+		/*background: #0d77b6;*/
+	 	//z-index: 1000;
+	 	box-shadow: 5px 8px 5px -5px #000 inset, 5px -8px 5px -5px #000 inset;
+	 	//font-family: 'Fjalla One';
+	}
+
+	p {
+		display: block;
+		color: #fff;
+		padding: 10px;
+	 	border-bottom: 1px solid black;
+	 	border-top: 1px solid #3c3c3c;
+	 	position: relative;
+
+	 	@include transition(all 0.3s ease);
+	}
+
+	a {
+		display: block;
+		color: #fff;
+		//background: $dark-grey;
+		//font-size: 1.1em;
+		//font-weight: 300;
+		text-decoration: none;
+	 	//z-index: 1000;
+
+	 	@include transition(all 0.3s ease);
+	}
+
+	> a {
+		padding: 10px;
+	 	border-bottom: 1px solid black;
+	 	border-top: 1px solid #3c3c3c;
+	}
+
+	> a:hover {
+		//background: $sky-blue;
+		background: $bright-green;
+		color: $dark-grey !important;
+		padding-left: 15px;
+		text-shadow: 2px 2px 0 #5dc008;
+	}
+
+	span {
+		float: right;
+	}
+
+	ul {
+		background: #444;
+		color: #fff;
+		position: fixed;
+		//top: 100%;
+		bottom: 0;
+		left: 240px;
+		width: 250px;
+		height: 0px;
+		z-index: -1;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		//opacity: 0;
+		//border-left: 1px solid #3c3c3c;
+		box-shadow: 6px 0 5px -5px #000 inset;
+
+	 	@include transition(all $nav-time ease);
+
+	 	li {
+			padding: $scale * 6px $scale * 12px;
+		}
+
+		li:first-child {
+			padding-top: $scale * 10px;
+		}
+
+		li:last-child {
+			padding-bottom: $scale * 10px;
+		}
+
+		a {
+			//display: inline;
+		}
+
+		a:hover {
+			//color: $sky-blue;
+			color: $bright-green;
+		}
+	}
+
+	/*ul:before {
+		content: '';
+		display: block;
+		border-color: transparent transparent $dark-grey transparent;
+		border-style: solid;
+		border-width: 10px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		margin-left: -10px;
+	}*/
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	top: 35px;
+
+	ul {
+		//top: 0;
+	}
+}
+
+.dropdown:hover,
+.dropdown:focus {
+	ul {
+		//width: 250px;
+		height: 100%;
+		//opacity: 1;
+	}
+
+	p {
+		color: $bright-green;
+
+		span:before,
+		span:after {
+			background: $bright-green;
+			
+			@include arrow-shadow($bright-green);
+		}
+	}
+}
+
+#showLeft {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	//top: 50%;
+	z-index: 1000;
+	background: #555;
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: 5px 0;
+	width: 240px;
+	height: 35px;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: 1px 1px 5px #000;
+
+	display: flex;
+
+	@include transition(all $nav-time ease);
+	//@include translateY(-50%);
+
+	.lines:before,
+	.lines:after {
+		@include line-transition;
+	}
+}
+
+#showLeft:hover {
+	background: #666;
+
+	.lines:before,
+	.lines:after {
+		//color: $sky-blue !important;
+		background: $bright-green;
+
+		@include arrow-shadow($bright-green);
+	}
+}
+
+.lines {
+	//margin: auto;
+	width: 100%;
+	height: 100%;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+
+		@include transition(background 0.3s ease);
+		@include line;
+	}
+
+	&:before {
+		right: $line-pos;
+
+		@include line-transform(rotate(-$line-rotate));
+	}
+
+	&:after {
+		left: $line-pos;
+
+		@include line-transform(rotate($line-rotate));
+	}
+}
+
+.lines.lines-active {
+	&:before {
+		@include line-transform(rotate($line-rotate));
+	}
+
+	&:after {
+		@include line-transform(rotate(-$line-rotate));
+	}
+}
+
+.arrow {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	right: 10px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		right: 10px;
+
+		@include transition(background 0.3s ease);
+		@include arrow;
+	}
+
+	&:before {
+		top: $arrow-pos;
+
+		@include transform(rotate($arrow-rotate));
+	}
+
+	&:after {
+		bottom: $arrow-pos;
+
+		@include transform(rotate(-$arrow-rotate));
+	}
+}
+
+header {
+	padding: 50px;
+	position: relative;
+	background: transparent;
+	//clear: both;
+	//overflow: auto;
+
+	&:after {
+		content: "";
+		background: repeating-linear-gradient(
+		  135deg,
+	    	#fff,
+	    	#fff 25px,    
+	    	#ddd 25px,
+	    	#ddd 50px
+		);
+		opacity: 0.3;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	img {
+		position: relative;
+		left: 0;
+		width: 250px;
+	}
+
+	div {
+		font-family: 'Fjalla One';
+		font-size: 90px;
+		text-transform: uppercase;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 50px;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+
+		p {
+			margin: auto;
+		}
+	}
+}
+
+#header {
+	display: block;
+	background: transparent;
+	//margin-top: $scale * 50px;
+	position: relative;
+	color: $light-grey;
+	
+	//.max-width {
+		/*padding: 100px 0;*/
+		overflow: auto;
+	//}
+	
+	p {
+		padding-bottom: $scale * 20px;
+	}
+	
+}
+
+.container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	//background: $sky-blue;
+	//background: rgb(117, 71, 25);
+	background: rgb(157, 111, 65);
+}
+
+#slides {
+	/*display: none;*/
+	width: 100%;
+	height: 100%;
+	
+	div {
+		width: 100%;
+		height: 100%;
+	}
+	
+}
+
+/*#red {
+	background: url(../images/placeholder.png) no-repeat 20% center;
+}
+
+#green {
+	background: url(../images/placeholder.png) no-repeat 20% center;
+}
+
+#blue {
+	background: url(../images/placeholder.png) no-repeat 20% center;
+}*/
+
+.header-text {
+	width: 50%;
+	padding: $scale * 100px $scale * 20px;
+	float: right;
+	z-index: 12;
+}
+
+.content {
+	text-align: center;
+	
+	a {
+		position: relative;
+		font-family: 'Montserrat';
+		font-size: $scale * 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		background: transparent;
+		color: #fff;
+		padding: $scale * 15px $scale * 20px;
+		z-index: 5;
+	}
+	
+	a:after {
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: #4b4b4b;
+		z-index: -1;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	a:hover:after {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	
+}
+
+#more {
+	z-index: -2;
+	//background: $dark-grey;
+	display: inline-flex;
+}
+
+article {
+	//.max-width {
+		padding: $scale * 50px;
+	//}
+	
+	h1 {
+		display: block;
+		padding-bottom: $scale * 20px;
+		text-align: center;
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		font-size: $scale * 40px;
+	}
+	
+}
+
+#projects {
+	background: $light-grey;
+	
+	h1 {
+		color: $dark-grey;
+		border-bottom: $scale * 1px solid $very-light-grey;
+	}
+	
+}
+
+#projects, section {
+	
+	.flexbox {
+		
+		span, p {
+			color: $dark-grey;
+		}
+		
+		a:hover {
+			background: #fff;
+		}
+		
+	}
+	
+	.quote-box {
+		color: $dark-grey;
+		border: $scale * 1px solid $very-light-grey;
+	}
+	
+}
+
+#templates {
+	background: #777;
+	
+	h1 {
+		color: #fff;
+		border-bottom: $scale * 1px solid #626262;
+	}
+	
+	.flexbox {
+		
+		span, p {
+			color: #fff;
+		}
+		
+		a:hover {
+			background: #555;
+		}
+		
+	}
+	
+	.quote-box {
+		color: #fff;
+		border: $scale * 1px solid #626262;
+	}
+	
+}
+
+.flexbox {
+	margin-top: $scale * 50px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	
+	a {
+		text-decoration: none;
+		display: block;
+		background: transparent;
+		margin: $scale * 20px;
+		padding-top: $scale * 30px;
+		position: relative;
+		bottom: 0;
+
+		flex-grow: 0;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	a:hover {
+		bottom: $scale * 20px;
+	}
+	
+	img, iframe {
+		display: block;
+		width: 80%;
+		margin: auto;
+	}
+	
+	span, p {
+		text-align: center;
+	}
+	
+	span {
+		margin: 0;
+		display: block;
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		font-size: $scale * 25px;
+		padding: $scale * 20px $scale * 10px $scale * 10px $scale * 10px;
+
+		/*@include transition(all 0.3s ease);*/
+	}
+	
+	p {
+		width: $scale * 296px;
+		padding: 0 $scale * 10px $scale * 20px $scale * 10px;
+
+		/*@include transition(all 0.3s ease);*/
+	}
+	
+}
+
+.img-container {
+	position: relative;
+	display: flex;
+}
+
+.ph0 {
+	text-transform: none !important;
+}
+
+.quote-box {
+	width: calc(100% - 300px);
+	margin: $scale * 20px auto 0 auto;
+	padding: $scale * 50px $scale * 100px;
+}
+
+.quote {
+	border-left: $scale * 20px solid rgba(0, 0, 0, 0.2);
+	padding: $scale * 20px 0 $scale * 20px $scale * 50px;
+	margin-bottom: $scale * 10px;
+}
+
+.author {
+	text-align: right;
+	font-family: 'Fjalla One';
+	letter-spacing: 0.05em;
+	
+	span {
+		padding: $scale * 10px $scale * 20px;
+		background: rgba(0, 0, 0, 0.1);
+	}
+	
+}
+
+footer {
+	background: $dark-grey;
+	color: #fff;
+	display: block;
+	margin: 0;
+	
+	//.max-width {
+		padding: $scale * 50px $scale * 100px;
+		
+		> div {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-content: space-around;
+		}
+		
+	//}
+	
+	h1 {
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		margin-bottom: $scale * 20px;
+		text-align: center;
+		letter-spacing: .05em;
+	}
+	
+	p {
+		padding-bottom: $scale * 20px;
+	}
+	
+	input, button {
+		font-size: $scale * 20px;
+		outline: none;
+		border: none;
+		background: #fff
+	}
+	
+	button {
+		color: $dark-grey;
+		cursor: pointer;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	button:hover {
+		color: $sky-blue;
+	}
+	
+}
+
+.social {
+	margin: 0 $scale * 25px;
+	width: 50%;
+
+	flex-grow: 0;
+}
+
+#contact {
+	a {
+		position: relative;
+		font-family: 'Montserrat';
+		font-size: $scale * 20px;
+		text-transform: uppercase;
+		text-decoration: none;
+		background: transparent;
+		color: #fff;
+		padding: $scale * 15px $scale * 20px;
+		//border: 2px solid #fff;
+		z-index: 5;
+	}
+	
+	a:after {
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: $sky-blue;
+		z-index: -1;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	a:hover {
+		//border-color: $sky-blue;
+		color: #fff;
+	}
+	
+	a:hover:after {
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	
+}
+
+#email {
+	display: inline-block;
+	margin: 0;
+	padding: $scale * 5px $scale * 5px $scale * 5px $scale * 10px;
+	background: #fff;
+}
+
+#copy {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	
+	//.max-width {
+		padding: $scale * 25px $scale * 50px $scale * 20px $scale * 50px;
+	//}
+	
+	p {
+		margin: 0;
+	}
+	
+}
+
+button:not([data-parent="nav"]),
+#more a {
+	font-size: 18px;
+	font-family: 'Fjalla One';
+	text-transform: uppercase;
+	cursor: pointer;
+	display: table;
+	//margin: 0;
+	//float: right;
+	position: relative;
+	//font-family: 'Montserrat';
+	//font-size: $scale * 20px;
+	text-decoration: none;
+	background: transparent;
+	color: $dark-grey;
+	padding: $scale * 15px $scale * 20px;
+	border: none;
+	outline: none;
+	z-index: 5;
+
+	&:after {
+		content: "";
+		display: block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: $bright-green;
+		z-index: -1;
+
+		@include transition(all 0.3s ease);
+	}
+
+	&:hover {
+		//color: #fff;
+
+		&:after {
+			width: 100%;
+			height: 100%;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+	}
+}
+
+section {
+	margin: 0;
+	padding: $scale * 50px 0;
+	//background: $light-grey;
+	background: url(../images/bedge_grunge.png) repeat;
+
+	> div {
+		padding: 25px 0;
+
+		&:last-child {
+			padding-bottom: 0px;
+		}
+	}
+	
+	//.max-width {
+		p {
+			display: block;
+			width: 80%;
+			max-width: $scale * 850px;
+			margin: $scale * 10px auto;
+			padding: 20px;
+		}
+	//}
+
+	h1 {
+		display: block;
+		width: calc(40px + 80%);
+		margin: 0 auto;
+		font-size: $scale * 50px;
+		text-align: center;
+		padding-bottom: $scale * 20px;
+		border-bottom: $scale * 1px solid $very-light-grey;
+	}
+
+	button {
+		margin: 0 auto;
+	}
+}
+
+.super-heading {
+	display: block;
+	text-align: center;
+	font-family: 'Fjalla One';
+	font-size: $scale * 100px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	margin-bottom: $scale * 20px;
+	//border-bottom: 2px solid black;
+}
+
+.external {
+	display: table;
+	margin: 0 auto;
+	position: relative;
+	font-family: 'Montserrat';
+	font-size: $scale * 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: transparent;
+	color: $dark-grey;
+	padding: $scale * 15px $scale * 20px;
+	/*border: 2px solid $dark-grey;*/
+	z-index: 5;
+}
+
+.external:after {
+	content: "";
+	display: block;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: $sky-blue;
+	z-index: -1;
+
+	@include transition(all 0.3s ease);
+}
+
+.external:hover {
+	/*border-color: $sky-blue;*/
+	color: #fff;
+}
+
+.external:hover:after {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.img-wide {
+	display: block;
+	width: 80%;
+	max-width: 900px;
+	margin: $scale * 20px auto $scale * 50px auto;
+	padding: $scale * 20px;
+	//padding-top: 0px;
+	margin-top: 0px;
+	border: $scale * 1px solid $very-light-grey;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+	
+}
+
+.contents {
+	width: 80%;
+	max-width: $scale * 850px;
+	margin: 20px auto;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+.cool-link {
+	a {
+		display: block;
+		margin: 10px;
+		position: relative;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 12px 10px 10px;
+		color: $dark-grey;
+		text-shadow: none;
+		//font-weight: 700;
+		font-family: 'Fjalla One';
+
+		flex-grow: 0;
+
+		@include transition(color 0.3s);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: $dark-grey;
+			content: '';
+			opacity: 0;
+
+			@include box-sizing;
+			@include cool-link-transition;
+		}
+
+		&::before {
+			top: 0;
+
+			@include transform(translateY(-$border-translate));
+		}
+
+		&::after {
+			bottom: 0;
+
+			@include transform(translateY($border-translate));
+		}
+
+		&:hover,
+		&:focus {
+			color: $bright-green;
+		}
+
+		&:hover::before,
+		&:hover::after,
+		&:focus::before,
+		&:focus::after {
+			opacity: 1;
+			background: $bright-green;
+
+			@include transform(translateY(0%));
+		}
+	}
+}
+
+form.not-edit {
+	display: block;
+	width: 80%;
+	max-width: 850px;
+	margin: 0 auto;
+
+	table {
+		width: 100%;
+
+		td {
+			width: 50%;
+			padding: 25px 0;
+		}
+
+		td[colspan="2"] {
+			input,
+			textarea {
+				margin-top: 10px;
+			}
+		}
+
+		span {
+			font-family: 'Fjalla One';
+			text-transform: uppercase;
+		}
+
+		input,
+		textarea {
+			width: calc(100% - 22px);
+			margin: 0;
+			padding: 10px;
+			border: 1px solid $very-light-grey;
+			border-radius: 3px;
+			outline: none;
+
+			@include transition(all 0.3s ease);
+
+			&:focus {
+				//border-color: #555;
+				//background: $bright-green;
+				box-shadow: 0 0 10px $bright-green;
+			}
+		}
+
+		textarea {
+			height: 150px;
+			resize: vertical;
+		}
+
+		button {
+			margin: 0;
+			float: right;
+		}
+	}
+}
+
+input,
+textarea {
+	font-size: 18px;
+	font-family: 'PT Sans' !important;
+}
+
+#fail {
+	color: #f00;
+}
+
+.testim {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 0;
+	overflow: auto;
+
+	> p {
+		padding-left: 50px;
+		border-left: 20px solid $bright-green;
+	}
+
+	div {
+		display: inline-block;
+		padding: 10px 20px;
+		background: $bright-green;
+		float: right;
+		text-align: right;
+
+		p {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.portrait {
+	display: block;
+	width: $portrait-dims;
+	height: $portrait-dims;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 20px auto;
+	position: relative;
+
+	img {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		width: $portrait-dims;
+		height: $portrait-dims;
+
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+.person {
+	width: 80%;
+	max-width: 850px;
+	margin: 0 auto;
+
+	/*tr {
+		margin: 20px 0;
+	}*/
+
+	th {
+		text-align: left;
+		vertical-align: top;
+		padding-right: 20px !important;
+	}
+
+	th,
+	td {
+		padding: 20px 0;		
+	}
+}
+
+::-ms-selection {
+	@include selection;
+}
+
+::-moz-selection {
+	@include selection;
+}
+
+::-webkit-selection {
+	@include selection;
+}
+
+::-o-selection {
+	@include selection;
+}
+
+::selection {
+	@include selection;
+}
+
+
+
+textarea {
+	width: 100%;
+	height: 100px;
+}
+
+input[type="file"] {
+	margin: 0 auto;
+	display: block;
+	margin-right: 20%;
+	margin-bottom: 20px;
+}
+
+.save {
+	margin: 0 auto;
+	display: block;
+	margin-top: 30px;
+}
+
+.current-file {
+	margin: 0 auto;
+	display: block;
+	padding: 0 0 10px 0;
+	text-align: center;
+	font-size: $scale * 22px;
+}
+.download-name {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;	
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Fjalla One' !important;
+	font-size: $scale * 50px;
+	letter-spacing: .05em;
+	font-weight: bold;
+	width: calc(40px + 80%);
+
+	:focus {
+		background: #355;
+	}
+}
+
+
+.download-text {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;
+}
+
+.download-div {
+	border: 1px dotted #742;
+	padding-top: 20px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+.service-text {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;
+	min-height: 300px;
+}
+
+.testim-edit {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+	overflow: auto;
+
+	> p {
+		padding-left: 50px;
+		border-left: 20px solid $bright-green;
+	}
+
+	div {
+		display: inline-block;
+		padding: 10px 20px;
+		background: $bright-green;
+		float: right;
+		text-align: right;
+
+		p {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.testimonial-input {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;	
+	text-align: right;
+	
+	font-family: 'PT Sans' !important;
+	font-size: $scale * 18px;
+	
+	:focus {
+		background: #355;
+	}
+}
+
+.delete-testimonials {
+	margin-top: 22px;
+	float: left;
+	margin-left: 100px;
+}
+
+.people-text {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;
+	height: 200px;
+	
+}
+
+.test {
+	display: block;
+}
+
+.edit-person {
+	width: 95% !important;
+
+	td {
+		width: 99% !important;
+	}
+}
+
+.benefits {
+	//width: 90%;
+	//max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li {
+
+			padding-bottom: 12px;
+			font-size: $scale * 20px;
+
+		}
+	}
+	
+}
+
+.benefit-header {
+
+	font-size: $scale * 44px;
+
+	display: block;
+	padding-bottom: $scale * 20px;
+	text-align: center;
+	font-family: 'Fjalla One';
+	text-transform: uppercase;
+	font-size: $scale * 40px;
+	border-bottom: $scale * 1px solid $dark-grey;
+
+}
+
+.quote-box {
+	color: $dark-grey;
+	border: $scale * 1px solid $very-light-grey;
+	padding: 0;
+}
+
+/*.left {
+	text-align: left;
+	margin-left:10%;
+}*/
+
+.home {
+	width:100%;
+	max-width: none;
+}
+
+.index-text {
+	background-color: #b7987d;
+	border-radius: 5px;
+	border-color: #742;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px 5px 2px 5px;
+	width: 60% !important;
+	display: inline;
+	margin-left: 0;
+}
+
+.right {
+
+	display: inline;
+	margin-right: 0;
+	margin-top: -40px;
+	
+}
+
+.index-div {
+	border: 1px dotted #742;
+	padding-top: 10px;
+	margin-top: 10px;
+	//padding-bottom: 10px;
+}
+
+.edit-slide{
+	margin: 0 auto;	
+	margin-top: 450px;
+	margin-left: 22%;
+}
+
+.no-underline {
+	text-decoration: none;
+	color: black;
+}
+
+.img-small {
+	display: block;
+	width: 45%;
+	margin: $scale * 20px auto 0 auto;
+	padding: $scale * 20px;
+	border: $scale * 1px solid $very-light-grey;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+	
+}
+
+.size {
+	max-width:400px;
+	height: 300px;
+	margin-left:6%;	
+	//margin: 0 auto;
+	margin-top: 100px;
+	//position: absolute;
+	box-shadow: 1px 1px 25px black;
+}
+
+
+/* delete the following if you don't want the dirt background and to put it back to the way it was before */
+
+/*body {
+	width: 95%;
+	max-width: 1100px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0px 0px 25px black;
+	background: none;
+}
+
+html {
+	//background: url(../images/bark.png) repeat;
+	background: url(../images/dirt2.png) repeat;
+}*/
+
+li[data-edit="li"] {
+	display: block;
+	padding: 0 20px;
+}
+
+.edit {
+	display: inline-block;
+	width: calc(100% - 22px);
+	margin: 0;
+	padding: 10px;
+	border: 1px solid $very-light-grey;
+	border-radius: 3px;
+	outline: none;
+	font-family: monospace !important;
+	font-size: 16px;
+
+	@include transition(all 0.3s ease);
+
+	&:focus {
+		box-shadow: 0 0 10px $sky-blue;
+	}
+
+	&.edit-benefit {
+		width: calc(100% - 125px);
+		float: left;
+	}
+}
+
+textarea.edit {
+	height: 200px;
+	resize: vertical;
+}
+
+.testim {
+	div {
+		.edit {
+			margin: 10px 0;
+		}
+	}
+}
+
+.add,
+.delete {
+	@include transition(all 0.3s ease);
+
+	&:hover {
+		color: $light-grey;
+	}
+}
+
+.add:after {
+	background: $sky-blue !important;
+}
+
+.delete:after {
+	background: #f00 !important;
+}

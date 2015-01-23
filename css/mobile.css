@@ -1,0 +1,44 @@
+nav > a {
+	padding: 5px 10px;
+}
+nav p {
+	padding: 5px 10px;
+}
+.arrow:before {
+	top: 13px;
+	width: 10px;
+}
+.arrow:after {
+	bottom: 13px;
+	width: 10px;
+}
+
+nav {
+	width: 50%;
+}
+
+#showLeft {
+	width: 50%;
+}
+
+.lines:before {
+	right: 49%;
+}
+.lines:after {
+	left: 49%;
+}
+
+nav ul {
+	left: 50%;
+	font-size: 14px;
+	width: 50%;
+}
+
+footer {
+	padding: 40px 20px;
+}
+
+footer img {
+	height: 80px;
+	width: 80px;
+}

@@ -1,0 +1,77 @@
+$border-translate: $scale * 10px;
+
+@mixin box-sizing {
+	-ms-box-sizing:     border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	-o-box-sizing:      border-box;
+	box-sizing:         border-box;
+}
+
+@mixin cool-link-transition {
+	-ms-transition:     opacity 0.3s, -ms-transform 0.3s;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition:    opacity 0.3s, -moz-transform 0.3s;
+	-o-transition:      opacity 0.3s, -o-transform 0.3s;
+	transition:         opacity 0.3s, transform 0.3s;
+}
+
+.cool-link {
+	a {
+		display: table;
+		margin: $scale * 20px auto;
+		position: relative;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: $scale * 12px $scale * 10px $scale * 10px;
+		color: $dark-grey;
+		text-shadow: none;
+		font-family: 'Fjalla One';
+
+		flex-grow: 0;
+
+		@include transition(color 0.3s);
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: $scale * 2px;
+			background: $dark-grey;
+			content: '';
+			opacity: 0;
+
+			@include box-sizing;
+			@include cool-link-transition;
+		}
+
+		&::before {
+			top: 0;
+
+			@include transform(translateY(-$border-translate));
+		}
+
+		&::after {
+			bottom: 0;
+
+			@include transform(translateY($border-translate));
+		}
+
+		&:hover,
+		&:focus {
+			color: $bright-green;
+		}
+
+		&:hover::before,
+		&:hover::after,
+		&:focus::before,
+		&:focus::after {
+			opacity: 1;
+			background: $bright-green;
+
+			@include transform(translateY(0%));
+		}
+	}
+}

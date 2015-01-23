@@ -1,0 +1,59 @@
+.flexbox {
+	margin-top: $scale * 50px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+	
+	> div {
+		text-decoration: none;
+		display: block;
+		background: transparent;
+		margin: $scale * 20px;
+		padding: $scale * 20px;
+		position: relative;
+		bottom: 0;
+		border: $scale * 1px solid $very-light-grey;
+
+		flex-grow: 0;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	a:hover {
+		bottom: $scale * 20px;
+	}
+	
+	img, iframe {
+		display: block;
+		width: 80%;
+		margin: auto;
+	}
+	
+	span, p {
+		text-align: center;
+	}
+	
+	span {
+		margin: 0;
+		display: block;
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		font-size: $scale * 25px;
+		// padding: $scale * 20px $scale * 10px $scale * 10px $scale * 10px;
+	}
+	
+	p {
+		width: $scale * 296px;
+		// padding: 0 $scale * 10px $scale * 20px $scale * 10px;
+		padding: 0;
+	}
+	
+}
+
+.img-container {
+	position: relative;
+	display: flex;
+}

@@ -1,0 +1,25 @@
+@mixin selection {
+	background: #439add;
+	color: #000;
+	text-shadow: none;
+}
+
+::-ms-selection {
+	@include selection;
+}
+
+::-moz-selection {
+	@include selection;
+}
+
+::-webkit-selection {
+	@include selection;
+}
+
+::-o-selection {
+	@include selection;
+}
+
+::selection {
+	@include selection;
+}

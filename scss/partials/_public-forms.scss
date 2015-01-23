@@ -1,0 +1,63 @@
+form.not-edit {
+	display: block;
+	width: 80%;
+	max-width: $scale * 850px;
+	margin: 0 auto;
+
+	table {
+		width: 100%;
+
+		td {
+			width: 50%;
+			padding: $scale * 25px 0;
+		}
+
+		td[colspan="2"] {
+			input,
+			textarea {
+				margin-top: $scale * 10px;
+			}
+		}
+
+		span {
+			font-family: 'Fjalla One';
+			text-transform: uppercase;
+		}
+
+		input,
+		textarea {
+			width: calc(100% - 22px);
+			margin: 0;
+			padding: $scale * 10px;
+			border: $scale * 1px solid $very-light-grey;
+			border-radius: $scale * 3px;
+			outline: none;
+
+			@include transition(all 0.3s ease);
+
+			&:focus {
+				box-shadow: 0 0 $scale * 10px $bright-green;
+			}
+		}
+
+		textarea {
+			height: $scale * 150px;
+			resize: vertical;
+		}
+
+		button {
+			margin: 0;
+			float: right;
+		}
+	}
+}
+
+input,
+textarea {
+	font-size: $scale * 18px;
+	font-family: 'PT Sans' !important;
+}
+
+#fail {
+	color: #f00;
+}

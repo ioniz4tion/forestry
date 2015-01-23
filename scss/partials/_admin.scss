@@ -1,0 +1,126 @@
+input[type="file"] {
+	margin: 0 auto;
+	display: block;
+	margin-right: 20%;
+	margin-bottom: $scale * 20px;
+}
+
+.current-file {
+	margin: 0 auto;
+	display: block;
+	padding: 0 0 $scale * 10px 0;
+	text-align: center;
+	font-size: $scale * 22px;
+}
+
+.delete-testimonials {
+	margin-top: $scale * 22px;
+	float: left;
+	margin-left: $scale * 100px;
+}
+
+.benefits {
+	margin: 0 auto;
+	text-align: center;
+
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+
+		li {
+			padding-bottom: $scale * 12px;
+			font-size: $scale * 20px;
+		}
+	}
+}
+
+.edit-slide {
+	margin: 0 auto;	
+	margin-top: $scale * 450px;
+	margin-left: 22%;
+}
+
+.no-underline {
+	text-decoration: none;
+	color: black;
+}
+
+.img-small {
+	display: block;
+	width: 45%;
+	margin: $scale * 20px auto 0 auto;
+	padding: $scale * 20px;
+	border: $scale * 1px solid $very-light-grey;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.size {
+	max-width: $scale * 400px;
+	height: $scale * 300px;
+	margin-left: 6%;	
+	margin-top: $scale * 100px;
+	box-shadow: $scale * 1px $scale * 1px $scale * 25px black;
+}
+
+li[data-edit="li"] {
+	display: block;
+	padding: 0 $scale * 20px;
+}
+
+.edit {
+	display: inline-block;
+	width: calc(100% - 22px);
+	margin: 0;
+	padding: $scale * 10px;
+	border: $scale * 1px solid $very-light-grey;
+	border-radius: $scale * 3px;
+	outline: none;
+	font-family: monospace !important;
+	font-size: $scale * 16px;
+
+	@include transition(all 0.3s ease);
+
+	&:focus {
+		box-shadow: 0 0 $scale * 10px $sky-blue;
+	}
+
+	&.edit-benefit {
+		width: calc(100% - 125px);
+		float: left;
+	}
+}
+
+textarea.edit {
+	height: $scale * 200px;
+	resize: vertical;
+}
+
+.testim {
+	div {
+		.edit {
+			margin: $scale * 10px 0;
+		}
+	}
+}
+
+.add,
+.delete {
+	@include transition(all 0.3s ease);
+
+	&:hover {
+		color: $light-grey;
+	}
+}
+
+.add:after {
+	background: $sky-blue !important;
+}
+
+.delete:after {
+	background: #f00 !important;
+}

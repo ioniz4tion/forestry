@@ -1,0 +1,28 @@
+.testim {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: $scale * 20px 0;
+	overflow: auto;
+
+	> p {
+		padding-left: $scale * 50px;
+		border-left: $scale * 20px solid $bright-green;
+		font-size: $scale * 22px;
+	}
+
+	div {
+		display: inline-block;
+		padding: $scale * 10px $scale * 20px;
+		background: $bright-green;
+		float: right;
+		text-align: right;
+
+		p {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

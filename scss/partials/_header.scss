@@ -1,0 +1,59 @@
+header {
+	padding: $scale * 50px;
+	position: relative;
+	background: transparent;
+	box-shadow: 0px $scale * 5px $scale * 20px black;
+
+	&:after {
+		content: "";
+		background:
+			-webkit-linear-gradient(
+				left,
+				rgba(255,255,255,0),
+				rgba(255,255,255,0.7)),
+			url(../images/banner.jpg);
+
+		opacity: 1;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	a {
+		@include transition(all 0.3s ease);
+
+		&:hover {
+			padding-left: $scale * 10px;
+		}
+	}
+
+	img {
+		position: relative;
+		left: 0;
+		width: $scale * 250px;
+	}
+
+	div {
+		font-family: 'Fjalla One';
+		font-size: $scale * 90px;
+		text-transform: uppercase;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: $scale * 50px;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+
+		p {
+			margin: auto;
+		}
+	}
+}

@@ -1,0 +1,100 @@
+@mixin section-bg($r, $g, $b, $a, $img) {
+	background:
+		-ms-linear-gradient(
+			top,
+			rgba($r, $g, $b, $a) 0%,
+			rgba($r, $g, $b, $a) 100%),
+		$img repeat 0 0;
+
+	background:
+		-moz-linear-gradient(
+			top,
+			rgba($r, $g, $b, $a) 0%,
+			rgba($r, $g, $b, $a) 100%),
+		$img repeat 0 0;
+
+	background:
+		-webkit-linear-gradient(
+			top,
+			rgba($r, $g, $b, $a) 0%,
+			rgba($r, $g, $b, $a) 100%),
+		$img repeat 0 0;
+
+	background:
+		-o-linear-gradient(
+			top,
+			rgba($r, $g, $b, $a) 0%,
+			rgba($r, $g, $b, $a) 100%),
+		$img repeat 0 0;
+
+	background:
+		linear-gradient(
+			top,
+			rgba($r, $g, $b, $a) 0%,
+			rgba($r, $g, $b, $a) 100%),
+		$img repeat 0 0;
+}
+
+section {
+	margin: 0;
+	padding: $scale * 50px 0;
+	// background: url(../images/bedge_grunge.png) repeat;
+
+	@include section-bg(180, 140, 105, 0.9, url(../images/bark.jpg));
+
+	> div {
+		padding: $scale * 25px 0;
+
+		&:last-child {
+			padding-bottom: 0px;
+		}
+	}
+
+	p {
+		display: block;
+		width: 80%;
+		max-width: $scale * 850px;
+		margin: $scale * 10px auto;
+		padding: $scale * 20px;
+	}
+
+	h1 {
+		display: block;
+		width: calc(40px + 80%);
+		margin: 0 auto;
+		font-size: $scale * 50px;
+		text-align: center;
+		padding-bottom: $scale * 20px;
+		border-bottom: $scale * 1px solid $very-light-grey;
+	}
+
+	button {
+		margin: 0 auto;
+	}
+}
+
+.super-heading {
+	display: block;
+	text-align: center;
+	font-family: 'Fjalla One';
+	font-size: $scale * 100px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.05em;
+	margin-bottom: $scale * 20px;
+}
+
+.img-wide {
+	display: block;
+	width: 80%;
+	max-width: $scale * 800px;
+	margin: $scale * 20px auto $scale * 50px auto;
+	padding: $scale * 20px;
+	margin-top: 0px;
+	border: $scale * 1px solid $very-light-grey;
+	
+	img {
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,142 @@
+section {
+	margin: 0;
+	padding: $scale * 50px 0;
+	
+	//THESE NEED TO BE ADDED OR EDITED
+	background-image: url(../images/bedge_grunge.png);
+	background-color: rgb(157, 111, 65);	
+	box-shadow: 0px 5px 5px black;
+
+
+
+
+
+
+.container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	width: 100%;
+	//background: $sky-blue;
+	//background: rgb(117, 71, 25);
+	background: rgb(157, 111, 65);
+
+
+	//ADD THIS ALSO
+	&:after {
+		content: "";
+		/*background: repeating-linear-gradient(
+		  135deg,
+	    	#fff,
+	    	#fff 25px,    
+	    	#ddd 25px,
+	    	#ddd 50px
+		);*/
+		background-image: url(../images/bark.jpg);
+
+		opacity: 0.4;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+footer {
+	background: $dark-grey;
+	color: #fff;
+	display: block;
+	margin: 0;
+	box-shadow: 0 0 20px black inset;
+	
+	//.max-width {
+		padding: $scale * 50px $scale * 100px;
+		
+		> div {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-content: space-around;
+		}
+		
+	//}
+	
+	h1 {
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		margin-bottom: $scale * 20px;
+		text-align: center;
+		letter-spacing: .05em;
+	}
+	
+	p {
+		padding-bottom: $scale * 20px;
+	}
+	
+	input, button {
+		font-size: $scale * 20px;
+		outline: none;
+		border: none;
+		background: #fff
+	}
+	
+	button {
+		color: $dark-grey;
+		cursor: pointer;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	button:hover {
+		color: $sky-blue;
+	}
+
+
+	//THIS WAS ADDED 
+	//ADD THIS
+
+	img {
+		-webkit-transition: all 0.3s ease;
+     -moz-transition: all 0.3s ease;
+       -o-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          &:hover {
+          	-webkit-transform: rotate(10deg);
+     -moz-transform: rotate(10deg);
+       -o-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+          }
+	}
+	
+}
+
+header {
+	padding: 50px;
+	position: relative;
+
+
+
+
+	//ADD THIS
+	box-shadow: 0px 5px 20px black;
+	&:after {
+
+		//AND THIS STUFF
+		content: "";		
+		background-image: url(../images/banner.jpg);
+		background: -webkit-linear-gradient(left,rgba(255,255,255,0),rgba(255,255,255,0.7)), url(../images/banner.jpg);
+		//background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0.8) 100%), url(../images/banner.jpg);
+
+		opacity: 1.0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		z-index: -1;
+	}

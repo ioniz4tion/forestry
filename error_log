@@ -1,0 +1,126 @@
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 126
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 127
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:32:35 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:32:35 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 76
+[15-Sep-2014 03:32:35 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 137
+[15-Sep-2014 03:32:35 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 140
+[15-Sep-2014 03:32:35 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 141
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: NO) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: NO) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: NO) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 126
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 127
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:33 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 76
+[15-Sep-2014 03:35:33 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 137
+[15-Sep-2014 03:35:33 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 140
+[15-Sep-2014 03:35:33 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 141
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 126
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 127
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:35:51 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:35:51 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 76
+[15-Sep-2014 03:35:51 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 137
+[15-Sep-2014 03:35:51 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 140
+[15-Sep-2014 03:35:51 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 141
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'iqover9001'@'localhost' (using password: YES) in /home/iqover9001/public_html/WebDesign/Database.class.php on line 25
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_escape_string() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 26
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 42
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_field() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 44
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 48
+[15-Sep-2014 03:36:08 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/iqover9001/public_html/WebDesign/Database.class.php on line 58
+[15-Sep-2014 03:36:08 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 76
+[15-Sep-2014 03:36:08 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 137
+[15-Sep-2014 03:36:08 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 140
+[15-Sep-2014 03:36:08 UTC] PHP Notice:  Undefined property: WebDesign\Database::$text in /home/iqover9001/public_html/index.php on line 141
+[15-Sep-2014 03:37:11 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:11 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:15 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:15 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:17 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:17 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:20 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:20 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:23 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:23 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:26 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:26 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:38 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:38 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:41 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:37:41 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 61
+[15-Sep-2014 03:39:03 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 163
+[15-Sep-2014 03:39:03 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 163
+[15-Sep-2014 03:39:14 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 163
+[15-Sep-2014 03:39:14 UTC] PHP Notice:  Undefined variable: image in /home/iqover9001/public_html/index.php on line 163

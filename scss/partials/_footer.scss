@@ -1,0 +1,64 @@
+footer {
+	background: $dark-grey;
+	color: #fff;
+	display: block;
+	margin: 0;
+	padding: $scale * 50px $scale * 100px;
+	
+	> div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: space-around;
+	}
+	
+	h1 {
+		font-family: 'Fjalla One';
+		text-transform: uppercase;
+		margin-bottom: $scale * 20px;
+		text-align: center;
+		letter-spacing: .05em;
+	}
+	
+	p {
+		padding-bottom: $scale * 20px;
+	}
+	
+	input, button {
+		font-size: $scale * 20px;
+		outline: none;
+		border: none;
+		background: #fff
+	}
+	
+	button {
+		color: $dark-grey;
+		cursor: pointer;
+
+		@include transition(all 0.3s ease);
+	}
+	
+	button:hover {
+		color: $sky-blue;
+	}
+
+	a {
+		@include transition(all 0.3s ease);
+
+		&:hover {
+			@include transform(rotate(10deg));
+		}
+	}
+}
+
+#copy {
+	background: #000;
+	color: #fff;
+	text-align: center;
+	padding: $scale * 25px $scale * 50px $scale * 20px $scale * 50px;
+	
+	p {
+		margin: 0;
+	}
+	
+}

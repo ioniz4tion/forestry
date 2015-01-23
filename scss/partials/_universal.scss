@@ -1,0 +1,49 @@
+@mixin transition($transition) {
+	-ms-transition:     $transition;
+	-webkit-transition: $transition;
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+}
+
+@mixin transform($transform) {
+	-ms-transform:     $transform;
+	-webkit-transform: $transform;
+	-moz-transform:    $transform;
+	-o-transform:      $transform;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans';
+	color: $dark-grey;
+	display: block !important;
+	position: relative;
+	line-height: 1.4;
+	background: #fff;
+	font-size: $scale * 18px;
+}
+
+a {
+	@include transition(all 0.3s ease);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'Fjalla One';
+}

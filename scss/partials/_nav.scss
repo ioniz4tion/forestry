@@ -1,0 +1,267 @@
+$nav-time: 0.5s;
+$line-pos: $scale * 117px;
+$line-rotate: 20deg;
+$arrow-pos: $scale * 17px;
+$arrow-rotate: 70deg;
+
+@mixin line-transition {
+	-ms-transition:     all $nav-time ease, background 0.3s ease;
+	-webkit-transition: all $nav-time ease, background 0.3s ease;
+	-moz-transition:    all $nav-time ease, background 0.3s ease;
+	-o-transition:      all $nav-time ease, background 0.3s ease;
+}
+
+@mixin line-transform($line-transform) {
+	-ms-transform:     translateY(-50%) $line-transform;
+	-webkit-transform: translateY(-50%) $line-transform;
+	-moz-transform:    translateY(-50%) $line-transform;
+	-o-transform:      translateY(-50%) $line-transform;
+}
+
+@mixin line {
+	display: inline-block;
+	width: $scale * 35px;
+	height: $scale * 5px;
+	background: #fff;
+	border-radius: $scale * 5px;
+
+	@include transition(all $nav-time ease);
+	@include arrow-shadow(rgba(200, 200, 200, 0.7));
+}
+
+@mixin arrow {
+	display: inline-block;
+	width: $scale * 12px;
+	height: $scale * 2px;
+	background: #fff;
+	border-radius: $scale * 5px;
+
+	@include transition(all 0.3s ease);
+	@include arrow-shadow(rgba(200, 200, 200, 0.7));
+}
+
+@mixin arrow-shadow($color) {
+	box-shadow: 0 0 $scale * 10px $color;
+}
+
+nav {
+	background: $dark-grey;
+	color: #fff;
+	position: fixed;
+	width: $scale * 240px;
+	height: calc(100% - 35px);
+	top: 100%;
+	z-index: 1000;
+	left: 0;
+	font-family: 'Fjalla One';
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-shadow: $scale * 2px $scale * 2px 0 #000;
+	box-shadow: $scale * 1px $scale * -1px $scale * 5px #000;
+
+	@include transition(all $nav-time ease);
+
+	h3 {
+		color: $bright-green;
+		font-size: $scale * 24px;
+		padding: $scale * 20px;
+		margin: 0;
+		font-weight: 300;
+	 	box-shadow: $scale * 5px $scale * 8px $scale * 5px $scale * -5px #000 inset, $scale * 5px $scale * -8px $scale * 5px $scale * -5px #000 inset;
+	}
+
+	p {
+		display: block;
+		color: #fff;
+		padding: $scale * 10px;
+	 	border-bottom: $scale * 1px solid black;
+	 	border-top: $scale * 1px solid #3c3c3c;
+	 	position: relative;
+
+	 	@include transition(all 0.3s ease);
+	}
+
+	a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+
+	 	@include transition(all 0.3s ease);
+	}
+
+	> a {
+		padding: $scale * 10px;
+	 	border-bottom: $scale * 1px solid black;
+	 	border-top: $scale * 1px solid #3c3c3c;
+	}
+
+	> a:hover {
+		background: $bright-green;
+		color: $dark-grey !important;
+		padding-left: $scale * 15px;
+		text-shadow: $scale * 2px $scale * 2px 0 #5dc008;
+	}
+
+	span {
+		float: right;
+	}
+
+	ul {
+		background: #444;
+		color: #fff;
+		position: fixed;
+		bottom: 0;
+		left: $scale * 240px;
+		width: $scale * 250px;
+		height: 0px;
+		z-index: -1;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		box-shadow: $scale * 6px 0 $scale * 5px $scale * -5px #000 inset;
+
+	 	@include transition(all $nav-time ease);
+
+	 	li {
+			padding: $scale * 6px $scale * 12px;
+		}
+
+		li:first-child {
+			padding-top: $scale * 10px;
+		}
+
+		li:last-child {
+			padding-bottom: $scale * 10px;
+		}
+
+		a:hover {
+			color: $bright-green;
+		}
+	}
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	top: $scale * 35px;
+}
+
+.dropdown:hover,
+.dropdown:focus {
+	ul {
+		height: 100%;
+	}
+
+	p {
+		color: $bright-green;
+
+		span:before,
+		span:after {
+			background: $bright-green;
+			
+			@include arrow-shadow($bright-green);
+		}
+	}
+}
+
+#showLeft {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	background: #555;
+	outline: none;
+	border: none;
+	margin: 0;
+	padding: $scale * 5px 0;
+	width: $scale * 240px;
+	height: $scale * 35px;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: $scale * 1px $scale * 1px $scale * 5px #000;
+
+	display: flex;
+
+	@include transition(all $nav-time ease);
+
+	.lines:before,
+	.lines:after {
+		@include line-transition;
+	}
+}
+
+#showLeft:hover {
+	background: #666;
+
+	.lines:before,
+	.lines:after {
+		background: $bright-green;
+
+		@include arrow-shadow($bright-green);
+	}
+}
+
+.lines {
+	width: 100%;
+	height: 100%;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+
+		@include transition(background 0.3s ease);
+		@include line;
+	}
+
+	&:before {
+		right: $line-pos;
+
+		@include line-transform(rotate(-$line-rotate));
+	}
+
+	&:after {
+		left: $line-pos;
+
+		@include line-transform(rotate($line-rotate));
+	}
+}
+
+.lines.lines-active {
+	&:before {
+		@include line-transform(rotate($line-rotate));
+	}
+
+	&:after {
+		@include line-transform(rotate(-$line-rotate));
+	}
+}
+
+.arrow {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	right: $scale * 10px;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		right: $scale * 10px;
+
+		@include transition(background 0.3s ease);
+		@include arrow;
+	}
+
+	&:before {
+		top: $arrow-pos;
+
+		@include transform(rotate($arrow-rotate));
+	}
+
+	&:after {
+		bottom: $arrow-pos;
+
+		@include transform(rotate(-$arrow-rotate));
+	}
+}
