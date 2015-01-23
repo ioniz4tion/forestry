@@ -26,31 +26,25 @@ body {
 @keyframes juggle {
   0% {
     transform: translateX(0px) translateY(0px); }
-
   12.5% {
     transform: translateX(25px) translateY(-55px) scale(1.1);
     background: #36D7B7; }
-
   25% {
     transform: translateX(50px) translateY(0px);
     animation-timing-function: ease-out; }
-
   37.5% {
     transform: translateX(25px) translateY(55px); }
-
   50% {
     transform: translateX(0px) translateY(0px); }
-
   62.5% {
     transform: translateX(-25px) translateY(-55px) scale(1.1);
     animation-timing-function: ease-in; }
-
   75% {
     transform: translateX(-50px) translateY(0px);
     animation-timing-function: ease-out; }
-
   87.5% {
     transform: translateX(-25px) translateY(55px); }
-
   100% {
     transform: translateX(0px) translateY(0px); } }
+
+/*# sourceMappingURL=load.css.map */
