@@ -28,13 +28,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Employees - 
 
 <?php require "header.php" ?>
+
+		<meta name="description" content="Learn a little bit about the background of each of our staff members.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

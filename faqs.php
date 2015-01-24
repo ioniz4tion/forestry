@@ -29,13 +29,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>FAQs - 
 
 <?php require 'header.php';?>
+
+		<meta name="description" content="">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

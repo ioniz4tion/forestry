@@ -1,0 +1,17 @@
+#market-table {
+	width: 90%;
+	margin: 0 auto;
+	border-collapse: collapse;
+
+	th, td {
+		border: 1px solid $very-light-grey;
+		border-left: none;
+		border-right: none;
+		padding: 8px;
+		text-align: left;
+	}
+
+	th {
+		border-top: none;
+	}
+}

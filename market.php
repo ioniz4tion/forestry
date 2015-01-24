@@ -29,13 +29,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Market Report - 
 
 <?php require_once "header.php"; ?>
+
+		<meta name="description" content="Compare market prices of various types of wood.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 		<section>
 

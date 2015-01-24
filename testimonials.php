@@ -28,13 +28,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Testimonials - 
 
 <?php require "header.php";?>
+
+		<meta name="description" content="Read testimonials of customers that have used Rocky Mountain Forestry's services.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

@@ -29,13 +29,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Job Applications - 
 
 <?php require "header.php" ?>
+
+		<meta name="description" content="Download a job application to apply for a job at Rocky Mountain Forestry.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

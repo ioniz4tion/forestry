@@ -29,13 +29,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>About Us - 
 
 <?php require "header.php" ?>
+
+		<meta name="description" content="Learn about Rocky Mountain Forestry and its background.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

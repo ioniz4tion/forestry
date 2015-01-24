@@ -28,13 +28,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Available Positions - 
 
 <?php require 'header.php'; ?>
+
+		<meta name="description" content="View and apply for all of our open positions at Rocky Mountain Forestry.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

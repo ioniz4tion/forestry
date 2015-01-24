@@ -27,13 +27,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>Contact Us - 
 
 <?php require "header.php" ?>
+
+		<meta name="description" content="Get in touch with staff at Rocky Mountain Forestry. Submit a question or comment and we will respond in a timely manner.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 		<section>
 

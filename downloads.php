@@ -28,13 +28,20 @@
 ?>
 
 <!doctype html>
-<html>
+
+<html lang="en-US">
 
 	<head>
 
 		<title>Downloads - 
 
 <?php require 'header.php';?>
+
+		<meta name="description" content="Files provided by Rocky Mountain Forestry that are available to download.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 
 	<?php if ($functions->login) {?>

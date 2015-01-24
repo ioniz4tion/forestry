@@ -19,13 +19,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>	
 
 		<title>Services - 
 
 <?php require 'header.php'; ?>
+
+		<meta name="description" content="Browse through a list of all services that Rocky Mountain Forestry provides.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 

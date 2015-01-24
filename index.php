@@ -32,13 +32,19 @@
 
 <!doctype html>
 
-<html>
+<html lang="en-US">
 
 	<head>
 
 		<title>
 
 <?php require "header.php" ?>
+
+		<meta name="description" content="Rocky Mountain Forestry is the go-to timber business in North Idaho. We provide many logging services to our customers and we also have several job openings.">
+
+	</head>
+
+<?php require "header2.php" ?>
 
 	<?php if ($functions->login) { ?>
 
