@@ -1,11 +1,7 @@
 .flexbox {
 	margin-top: $scale * 50px;
 
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: space-around;
+	@include flexbox;
 	
 	> div {
 		text-decoration: none;
@@ -17,8 +13,7 @@
 		bottom: 0;
 		border: $scale * 1px solid $very-light-grey;
 
-		flex-grow: 0;
-
+		@include flex-grow(0);
 		@include transition(all 0.3s ease);
 	}
 	
@@ -55,5 +50,6 @@
 
 .img-container {
 	position: relative;
-	display: flex;
+	
+	@include display-flex;
 }

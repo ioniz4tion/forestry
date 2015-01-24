@@ -12,6 +12,54 @@
 	-o-transform:      $transform;
 }
 
+@mixin flexbox {
+	display: -ms-flex;
+	flex-direction: -ms-row;
+	flex-wrap: -ms-wrap;
+	justify-content: -ms-space-around;
+	align-content: -ms-space-around;
+
+	display: -moz-flex;
+	flex-direction: -moz-row;
+	flex-wrap: -moz-wrap;
+	justify-content: -moz-space-around;
+	align-content: -moz-space-around;
+
+	display: -webkit-flex;
+	flex-direction: -webkit-row;
+	flex-wrap: -webkit-wrap;
+	justify-content: -webkit-space-around;
+	align-content: -webkit-space-around;
+
+	display: -o-flex;
+	flex-direction: -o-row;
+	flex-wrap: -o-wrap;
+	justify-content: -o-space-around;
+	align-content: -o-space-around;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+@mixin display-flex {
+	display:     -ms-flex;
+	display:    -moz-flex;
+	display: -webkit-flex;
+	display:      -o-flex;
+	display:         flex;
+}
+
+@mixin flex-grow($grow) {
+	    -ms-flex-grow: $grow;
+	   -moz-flex-grow: $grow;
+	-webkit-flex-grow: $grow;
+	     -o-flex-grow: $grow;
+	        flex-grow: $grow;
+}
+
 html {
 	margin: 0;
 	padding: 0;
